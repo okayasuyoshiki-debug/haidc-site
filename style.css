@@ -797,42 +797,105 @@ a {
   line-height: 1.8;
 }
 
-.value-prop {
-  padding: var(--space-lg);
-  background: var(--color-card);
-  border: 1px solid var(--color-border);
-  border-radius: 16px;
+/* ===== AI Driven Approach Section ===== */
+.aida-section {
+  position: relative;
+  padding: var(--space-2xl) 0;
+  background: linear-gradient(135deg, #0a0a14 0%, #111133 50%, #0a0a14 100%);
+  overflow: hidden;
 }
 
-.value-prop h3 {
-  font-size: 1rem;
-  font-weight: 700;
-  margin-bottom: var(--space-md);
+.aida-bg-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(200px, 30vw, 500px);
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.02);
+  letter-spacing: -0.05em;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.aida-header {
   text-align: center;
+  margin-bottom: var(--space-xl);
 }
 
-.vp-grid {
+.aida-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: var(--space-sm);
+}
+
+.aida-title {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 900;
+  line-height: 1.1;
+  color: #fff;
+  margin-bottom: var(--space-md);
+  background: linear-gradient(135deg, #fff 0%, #a8b4ff 50%, #6366f1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.aida-desc {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.8;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.aida-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: var(--space-md);
 }
 
-.vp-item {
-  text-align: center;
+.aida-card {
+  position: relative;
+  padding: var(--space-lg);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease;
 }
 
-.vp-item span {
-  display: block;
-  font-size: 1.5rem;
+.aida-card:hover {
+  transform: translateY(-6px);
+  background: rgba(99, 102, 241, 0.08);
+  border-color: rgba(99, 102, 241, 0.3);
+}
+
+.aida-card-num {
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 1;
+  background: linear-gradient(180deg, rgba(99, 102, 241, 0.4) 0%, rgba(99, 102, 241, 0.05) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: var(--space-sm);
+}
+
+.aida-card-title {
+  font-size: 1.15rem;
   font-weight: 800;
-  color: var(--color-accent);
-  opacity: 0.3;
-  margin-bottom: 4px;
+  color: #fff;
+  line-height: 1.4;
+  margin-bottom: var(--space-sm);
 }
 
-.vp-item p {
-  font-size: 0.8rem;
-  font-weight: 600;
+.aida-card-text {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.7;
 }
 
 /* ===== Members ===== */
@@ -1133,7 +1196,7 @@ a {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .vp-grid {
+  .aida-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
